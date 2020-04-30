@@ -1,0 +1,16 @@
+browser to server: HTTP POST https://fullstack-exampleapp.herokuapp.com/spa
+server to browser: html code
+browser to server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+server to browser: main.css
+browser to server: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa.js
+server to browser: spa.js
+//once the browser receives the HTML document, it executes the scripts inside the document to request main.css and spa.js, respectively
+
+browser to server: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+server to browser: a JSON object containing all the notes 
+
+//browser renders the data in JSON as a new list of notes by calling redrawNotes() once the JSON data is received
+
+browser to server: HTTP GET https://fullstack-exampleapp.herokuapp.com/favicon.ico
+server to browser: none
+//browser requests an image icon but it's not found (404)
