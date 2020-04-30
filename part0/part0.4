@@ -1,0 +1,19 @@
+browser to server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note
+//browser posts the new note and is asked to send a new GET quest to the notes directory on the server
+
+browser to server: HTTP GET https://fullstack-exampleapp.herokuapp.com/notes
+server to browser: html code
+browser to server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+server to browser: main.css
+browser to server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.js
+server to browser: main.js
+//once the browser receives the HTML document, it executes the scripts inside the document to request main.css and main.js, respectively
+
+browser to server: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+server to browser: a JSON object containing all the notes including the newly created note as the last element
+
+//browser renders the data in JSON as a new list of notes.
+
+browser to server: HTTP GET https://fullstack-exampleapp.herokuapp.com/favicon.ico
+server to browser: none
+//browser requests an icon but it's not found (404)
