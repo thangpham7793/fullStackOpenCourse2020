@@ -24,7 +24,7 @@ const App = () => {
     const randomNum = () => Math.floor(Math.random() * (anecdotes.length))
 
     
-    //store a random number as the first selected index, so there's a new one on reload
+    //store a random number as the first selected index, so there's a new quote on reload
     const [selected, setSelected] = useState(randomNum())
     
 
