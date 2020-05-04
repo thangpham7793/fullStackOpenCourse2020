@@ -1,6 +1,7 @@
 import React from 'react'
+import Button from './Button'
 
-const Display = ({searchPhrase, persons}) => {
+const Display = ({searchPhrase, persons, handleDelete}) => {
 
     //display FILTERED persons unless the filter bar is empty 
     const personsToShow = searchPhrase.length  
@@ -11,10 +12,18 @@ const Display = ({searchPhrase, persons}) => {
     : persons
     
     return (
-        personsToShow.map((person, i) => 
+        personsToShow.map((person, i) =>
             <li key={i}>
-                {Object.values(person).join(' ')}
-            </li>)
+                <p>
+                    {Object.values(person)
+                        .slice(0, Object.values(person).length - 1)
+                        .join(' ')} 
+                </p>
+                <Button dataKey={person.id} 
+                        label="delete" 
+                        handleClick={handleDelete}/>
+            </li>
+        )
     )
 }
 
